@@ -1,0 +1,6 @@
+module Pods_ntvos {
+  umbrella header "Pods-ntvos-umbrella.h"
+
+  export *
+  module * { export * }
+}

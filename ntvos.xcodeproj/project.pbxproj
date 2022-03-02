@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AB2BC5F42D49FB0541604FB /* libPods-ntvos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 767C1A3C19DC1F238A0EF98C /* libPods-ntvos.a */; };
 		AF23A5F527CF0CE800659664 /* LiveDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23A5F427CF0CE800659664 /* LiveDataModel.swift */; };
 		AF23A5FD27CFADC500659664 /* UniversRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF23A5F827CFADC500659664 /* UniversRegular.ttf */; };
 		AF23A5FE27CFADC500659664 /* UniversCnBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF23A5F927CFADC500659664 /* UniversCnBold.ttf */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		767C1A3C19DC1F238A0EF98C /* libPods-ntvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ntvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97A5FFBC459E9740507E8CD /* Pods-ntvos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ntvos.release.xcconfig"; path = "Target Support Files/Pods-ntvos/Pods-ntvos.release.xcconfig"; sourceTree = "<group>"; };
 		AF23A5F427CF0CE800659664 /* LiveDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataModel.swift; sourceTree = "<group>"; };
 		AF23A5F827CFADC500659664 /* UniversRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UniversRegular.ttf; sourceTree = "<group>"; };
 		AF23A5F927CFADC500659664 /* UniversCnBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UniversCnBold.ttf; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		AFF35F5027CEBB66006A117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AFF35F5527CEC2A5006A117D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AFF35F5827CEC717006A117D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E7B21A8DBF594975D47DB5CB /* Pods-ntvos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ntvos.debug.xcconfig"; path = "Target Support Files/Pods-ntvos/Pods-ntvos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB2BC5F42D49FB0541604FB /* libPods-ntvos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61DB5E85F5113A1EE05B1FDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7B21A8DBF594975D47DB5CB /* Pods-ntvos.debug.xcconfig */,
+				A97A5FFBC459E9740507E8CD /* Pods-ntvos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AF23A5F627CFADAB00659664 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,7 @@
 				AF3E4FA027CD985B00A3DBF8 /* ntvosUITests */,
 				AF3E4F8427CD985A00A3DBF8 /* Products */,
 				AFF35F5727CEC717006A117D /* Frameworks */,
+				61DB5E85F5113A1EE05B1FDF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF35F5827CEC717006A117D /* AVFoundation.framework */,
+				767C1A3C19DC1F238A0EF98C /* libPods-ntvos.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF3E4FA727CD985B00A3DBF8 /* Build configuration list for PBXNativeTarget "ntvos" */;
 			buildPhases = (
+				ACC62D7418A33E1F8E0088A5 /* [CP] Check Pods Manifest.lock */,
 				AF3E4F7F27CD985A00A3DBF8 /* Sources */,
 				AF3E4F8027CD985A00A3DBF8 /* Frameworks */,
 				AF3E4F8127CD985A00A3DBF8 /* Resources */,
@@ -305,6 +323,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACC62D7418A33E1F8E0088A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ntvos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF3E4F7F27CD985A00A3DBF8 /* Sources */ = {
@@ -469,10 +512,13 @@
 		};
 		AF3E4FA827CD985B00A3DBF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B21A8DBF594975D47DB5CB /* Pods-ntvos.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ntvos/Preview Content\"";
 				DEVELOPMENT_TEAM = UU2QHUKDAY;
@@ -489,6 +535,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.franzwarning.ntvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ntvOS Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -497,10 +544,13 @@
 		};
 		AF3E4FA927CD985B00A3DBF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97A5FFBC459E9740507E8CD /* Pods-ntvos.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ntvos/Preview Content\"";
 				DEVELOPMENT_TEAM = UU2QHUKDAY;
@@ -517,6 +567,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.franzwarning.ntvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ntvOS Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;

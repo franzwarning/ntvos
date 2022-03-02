@@ -6,12 +6,7 @@
 //
 
 import Foundation
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let liveData = try? newJSONDecoder().decode(LiveData.self, from: jsonData)
-
-import Foundation
+import UIKit
 
 // MARK: - Response
 struct Response: Codable {
@@ -31,8 +26,8 @@ struct Result: Codable {
     let channelName: String
     let now: Now
     let id = UUID()
-
-
+    
+    
     enum CodingKeys: String, CodingKey {
         case channelName = "channel_name"
         case now
@@ -45,7 +40,7 @@ struct Now: Codable {
     let startTimestamp, endTimestamp: String
     let embeds: NowEmbeds
     let links: [Link]
-
+    
     enum CodingKeys: String, CodingKey {
         case broadcastTitle = "broadcast_title"
         case startTimestamp = "start_timestamp"
@@ -66,7 +61,7 @@ struct Details: Codable {
     let name, detailsDescription, descriptionHTML: String
     let externalLinks: [String]
     let moods, genres: [Genre]
-    let locationShort, locationLong: String
+    let locationShort, locationLong: String?
     let intensity: String?
     let media: Media
     let episodeAlias, showAlias: String
@@ -75,7 +70,7 @@ struct Details: Codable {
     let audioSources: [AudioSource]
     let embeds: DetailsEmbeds
     let links: [Link]
-
+    
     enum CodingKeys: String, CodingKey {
         case status, updated, name
         case detailsDescription = "description"
@@ -113,7 +108,7 @@ struct Media: Codable {
     let backgroundLarge, backgroundMediumLarge, backgroundMedium, backgroundSmall: String
     let backgroundThumb, pictureLarge, pictureMediumLarge, pictureMedium: String
     let pictureSmall, pictureThumb: String
-
+    
     enum CodingKeys: String, CodingKey {
         case backgroundLarge = "background_large"
         case backgroundMediumLarge = "background_medium_large"
@@ -134,7 +129,19 @@ class LiveDataModel: ObservableObject {
     @Published var response: Response?
     @Published var loading: Bool = true
     
+    init() {
+        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification,
+                                               object: nil,
+                                               queue: .main) { (notification) in
+            Task {
+                await self.load()
+            }
+            
+        }
+    }
+    
     func load() async {
+        print("LOADING DATA")
         self.loading = true
         let url = URL(string: "https://www.nts.live/api/v2/live")!
         let urlSession = URLSession.shared

@@ -9,16 +9,54 @@ import Foundation
 import SwiftUI
 import AVFoundation
 
-class Player: ObservableObject {
+
+enum CustomPlayerStatus {
+    case None
+    case Loading
+    case Playing
+    case Paused
+}
+
+class Player: AVPlayer, ObservableObject  {
     
-    var audioPlayer: AVPlayer?
+    @Published var customerPlayerStatus: CustomPlayerStatus = .None
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 
-    init() {
-        self.audioPlayer = AVPlayer()
+        if keyPath == "timeControlStatus" {
+            if self.timeControlStatus == .playing {
+                self.customerPlayerStatus = .Playing
+            } else if timeControlStatus == .paused {
+                self.customerPlayerStatus = .Paused
+            } else if timeControlStatus == .waitingToPlayAtSpecifiedRate {
+                self.customerPlayerStatus = .Loading
+            }
+        }
     }
-
-
-    func pauseOrPlay(streamUrl: String) {
+    
+    
+    override init() {
+        super.init()
+        self.addObserver(self, forKeyPath: "status", options: [.new], context: nil)
+        self.addObserver(self, forKeyPath: "timeControlStatus", options: [.old, .new], context: nil)
+        self.addObserver(self, forKeyPath: "rate", options: [.old, .new], context: nil)
+    }
+    
+    func toggle() {
+        if (self.customerPlayerStatus == .Playing) {
+            self.pause()
+        } else if (self.customerPlayerStatus == .Paused) {
+            self.play()
+        }
+    }
+    
+    func stop() {
+        self.pause()
+        self.rate = 0
+        self.customerPlayerStatus = .None
+    }
+    
+    func startPlay(streamUrl: String) {
         print("Playing: \(streamUrl)")
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -26,9 +64,7 @@ class Player: ObservableObject {
         
         let url = URL(string: streamUrl)!
         let playerItem = AVPlayerItem(url: url)
-        self.audioPlayer?.replaceCurrentItem(with: playerItem)
-
-        self.audioPlayer?.play()
-
+        self.replaceCurrentItem(with: playerItem)
+        self.play()
     }
 }

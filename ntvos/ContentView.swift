@@ -17,7 +17,7 @@ func utcToLocal(dateStr: String) -> String? {
     if let date = dateFormatter.date(from: dateStr) {
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "h:mm a"
-    
+        
         return dateFormatter.string(from: date)
     }
     return nil
@@ -34,22 +34,25 @@ struct ChannelCard: View {
     
     var body: some View {
         Button(action: {
-            player.pauseOrPlay(streamUrl: streamUrl)
+            player.startPlay(streamUrl: streamUrl)
         }) {
             ZStack {
-                AsyncImage(url: URL(string: imageUrl))
                 VStack {
                     HStack {
-                        Text("LIVE ON \(channelName)")
-                            .font(Font.custom("Univers-Bold", size: 30))
-                            .foregroundColor(.black)
-                            .padding(EdgeInsets(
-                                top: 10,
-                                leading: 10,
-                                bottom: 10,
-                                trailing: 10
-                            ))
-                            .background(.white)
+                        HStack {
+                            Text("LIVE ON \(channelName)")
+                                .font(Font.custom("Univers-Bold", size: 30))
+                                .foregroundColor(.black)
+                                .frame(alignment: .leading)
+                            HStack {}
+                            Color(.red)
+                                .background(.red)
+                                .cornerRadius(10)
+                                .frame(width: 10, height: 10)
+                                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        .background(.white)
                         Spacer()
                     }.padding()
                     Spacer()
@@ -73,10 +76,55 @@ struct ChannelCard: View {
                         .padding()
                         .background(.black)
                     }.padding()
-                }.frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.height / 2)
+                }
+                .background(AsyncImage(url: URL(string: imageUrl)).scaledToFill())
+                .frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.height / 2)
             }
         }
         .buttonStyle(.card)
+    }
+}
+
+struct LoadingView: View {
+    @State private var opacitySwitch: Bool = false
+    
+    var body: some View {
+        Text("LOADING")
+            .font(Font.custom("Univers-BoldCondensed", size: 40))
+            .foregroundColor(.gray)
+            .opacity(opacitySwitch ? 0.5 : 1)
+            .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: opacitySwitch)
+            .onAppear {
+                withAnimation {
+                    self.opacitySwitch.toggle()
+                }
+            }
+    }
+}
+
+struct PlayerView: View {
+    @EnvironmentObject var player: Player
+    var body: some View {
+        if (player.customerPlayerStatus != .None) {
+            VStack {
+                if player.customerPlayerStatus == .Loading {
+                    LoadingView()
+                } else {
+                    Button(action: {
+                        self.player.stop()
+                    }) {
+                        Image(systemName: "stop.circle.fill")
+                            .font(.system(size: 100))
+                    }
+                    .buttonStyle(.card)
+                    
+                }
+            }.frame(width: 500, height: 200)
+            Spacer()
+            
+        }
+        
+        
     }
 }
 
@@ -103,6 +151,7 @@ struct ContentView: View {
                         }
                     }
                     Spacer()
+                    PlayerView()
                 }
                 .frame(
                     minWidth: 0,
@@ -111,14 +160,11 @@ struct ContentView: View {
                     maxHeight: .infinity,
                     alignment: .center
                 )
+            } else {
+                LoadingView()
             }
         }
         .environmentObject(player)
-        .onAppear {
-            Task {
-                await self.liveData.load()
-            }
-        }
     }
     
 }
@@ -128,29 +174,36 @@ struct ContentView_Previews: PreviewProvider {
         ZStack {
             Color(.black)
                 .edgesIgnoringSafeArea(.all)
-            HStack {
-                ChannelCard(
-                    channelName: "1",
-                    streamUrl: "",
-                    imageUrl: "https://media2.ntslive.co.uk/resize/800x800/e565d72b-3dc8-4917-8811-f3da5d462ea9_1596067200.jpeg",
-                    channelDescription: "THIS IS A LONG TITLE FOR A STREAM BUT IT'S REALISTIC",
-                    channelTimeString: "10:00 -> 11:00"
-                )
-                ChannelCard(
-                    channelName: "2",
-                    
-                    streamUrl: "",
-                    imageUrl: "https://media2.ntslive.co.uk/resize/800x800/e565d72b-3dc8-4917-8811-f3da5d462ea9_1596067200.jpeg",
-                    channelDescription: "HIP HOP",
-                    channelTimeString: "10:00 -> 11:00"
-                )
-            }.frame(
+            VStack {
+                Spacer()
+                HStack {
+                    ChannelCard(
+                        channelName: "1",
+                        streamUrl: "",
+                        imageUrl: "https://media2.ntslive.co.uk/resize/800x800/e565d72b-3dc8-4917-8811-f3da5d462ea9_1596067200.jpeg",
+                        channelDescription: "THIS IS A LONG TITLE FOR A STREAM BUT IT'S REALISTIC",
+                        channelTimeString: "10:00 - 11:00"
+                    )
+                    ChannelCard(
+                        channelName: "2",
+                        
+                        streamUrl: "",
+                        imageUrl: "https://media2.ntslive.co.uk/resize/800x800/e565d72b-3dc8-4917-8811-f3da5d462ea9_1596067200.jpeg",
+                        channelDescription: "HIP HOP",
+                        channelTimeString: "10:00 - 11:00"
+                    )
+                }
+                Spacer()
+                PlayerView()
+            }
+            .frame(
                 minWidth: 0,
                 maxWidth: .infinity,
                 minHeight: 0,
                 maxHeight: .infinity,
                 alignment: .center
             )
-        }
+        }.environmentObject(Player())
+        
     }
 }

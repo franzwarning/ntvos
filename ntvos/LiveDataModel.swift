@@ -136,13 +136,16 @@ class LiveDataModel: ObservableObject {
             Task {
                 await self.load()
             }
-            
         }
     }
     
     func load() async {
         print("LOADING DATA")
-        self.loading = true
+        
+        DispatchQueue.main.async {
+            self.loading = true
+        }
+        
         let url = URL(string: "https://www.nts.live/api/v2/live")!
         let urlSession = URLSession.shared
         

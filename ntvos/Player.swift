@@ -28,9 +28,7 @@ class Player: AVPlayer, ObservableObject  {
                 self.customerPlayerStatus = .Playing
             } else if timeControlStatus == .paused {
                 self.customerPlayerStatus = .Paused
-            } else if timeControlStatus == .waitingToPlayAtSpecifiedRate {
-                self.customerPlayerStatus = .Loading
-            }
+            } 
         }
     }
     
@@ -54,10 +52,16 @@ class Player: AVPlayer, ObservableObject  {
         self.pause()
         self.rate = 0
         self.customerPlayerStatus = .None
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     func startPlay(streamUrl: String) {
         print("Playing: \(streamUrl)")
+        
+        DispatchQueue.main.async {
+            self.customerPlayerStatus = .Loading
+            
+        }
         
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(true, options: .notifyOthersOnDeactivation)
@@ -66,5 +70,6 @@ class Player: AVPlayer, ObservableObject  {
         let playerItem = AVPlayerItem(url: url)
         self.replaceCurrentItem(with: playerItem)
         self.play()
+        UIApplication.shared.isIdleTimerDisabled = true
     }
 }

@@ -21,6 +21,10 @@
 		AF3E4F9827CD985B00A3DBF8 /* ntvosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E4F9727CD985B00A3DBF8 /* ntvosTests.swift */; };
 		AF3E4FA227CD985B00A3DBF8 /* ntvosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E4FA127CD985B00A3DBF8 /* ntvosUITests.swift */; };
 		AF3E4FA427CD985B00A3DBF8 /* ntvosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E4FA327CD985B00A3DBF8 /* ntvosUITestsLaunchTests.swift */; };
+		AF7881C927D11E7D007E57B2 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7881C827D11E7D007E57B2 /* ChannelView.swift */; };
+		AF7881CB27D11EB6007E57B2 /* ChannelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7881CA27D11EB6007E57B2 /* ChannelCardView.swift */; };
+		AF7881CD27D11EC1007E57B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7881CC27D11EC1007E57B2 /* HomeView.swift */; };
+		AF7881CF27D11F42007E57B2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7881CE27D11F42007E57B2 /* LoadingView.swift */; };
 		AFF35F5627CEC2A5006A117D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF35F5527CEC2A5006A117D /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,10 @@
 		AF3E4F9D27CD985B00A3DBF8 /* ntvosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ntvosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3E4FA127CD985B00A3DBF8 /* ntvosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ntvosUITests.swift; sourceTree = "<group>"; };
 		AF3E4FA327CD985B00A3DBF8 /* ntvosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ntvosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF7881C827D11E7D007E57B2 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
+		AF7881CA27D11EB6007E57B2 /* ChannelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCardView.swift; sourceTree = "<group>"; };
+		AF7881CC27D11EC1007E57B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AF7881CE27D11F42007E57B2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AFF35F5027CEBB66006A117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AFF35F5527CEC2A5006A117D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AFF35F5827CEC717006A117D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -98,7 +106,6 @@
 				E7B21A8DBF594975D47DB5CB /* Pods-ntvos.debug.xcconfig */,
 				A97A5FFBC459E9740507E8CD /* Pods-ntvos.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +159,10 @@
 				AF3E4F8627CD985A00A3DBF8 /* ntvosApp.swift */,
 				AFF35F5527CEC2A5006A117D /* Player.swift */,
 				AF23A5F427CF0CE800659664 /* LiveDataModel.swift */,
+				AF7881C827D11E7D007E57B2 /* ChannelView.swift */,
+				AF7881CA27D11EB6007E57B2 /* ChannelCardView.swift */,
+				AF7881CE27D11F42007E57B2 /* LoadingView.swift */,
+				AF7881CC27D11EC1007E57B2 /* HomeView.swift */,
 				AF3E4F8827CD985A00A3DBF8 /* ContentView.swift */,
 				AF3E4F8A27CD985A00A3DBF8 /* Assets.xcassets */,
 				AF3E4F8C27CD985A00A3DBF8 /* Preview Content */,
@@ -355,8 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3E4F8927CD985A00A3DBF8 /* ContentView.swift in Sources */,
+				AF7881CD27D11EC1007E57B2 /* HomeView.swift in Sources */,
 				AF23A5F527CF0CE800659664 /* LiveDataModel.swift in Sources */,
 				AFF35F5627CEC2A5006A117D /* Player.swift in Sources */,
+				AF7881CB27D11EB6007E57B2 /* ChannelCardView.swift in Sources */,
+				AF7881CF27D11F42007E57B2 /* LoadingView.swift in Sources */,
+				AF7881C927D11E7D007E57B2 /* ChannelView.swift in Sources */,
 				AF3E4F8727CD985A00A3DBF8 /* ntvosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: franzwarning@gmail.com (39HZL3FZ49)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ntvos/Preview Content\"";
@@ -549,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Raymond Kennedy (UU2QHUKDAY)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ntvos/Preview Content\"";
@@ -567,7 +582,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.franzwarning.ntvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "ntvOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "ntvOS Distribution";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;

@@ -8,19 +8,30 @@
 import Foundation
 import SwiftUI
 
+//extension Animation {
+//    func `repeat`(while expression: Bool, autoreverses: Bool = true) -> Animation {
+//        if expression {
+//            return self.repeatForever(autoreverses: autoreverses)
+//        } else {
+//            return self
+//        }
+//    }
+//}
+
 struct LoadingView: View {
-    @State private var opacitySwitch: Bool = false
+    @State private var opacity = 1.0
     
     var body: some View {
-        Text("LOADING")
-            .font(Font.custom("Univers-BoldCondensed", size: 30))
-            .foregroundColor(.gray)
-            .opacity(opacitySwitch ? 0.5 : 1)
-            .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: opacitySwitch)
-            .onAppear {
-                withAnimation {
-                    self.opacitySwitch.toggle()
+        
+            Text("LOADING")
+                .font(Font.custom("Univers-BoldCondensed", size: 30))
+                .foregroundColor(.gray)
+                .opacity(opacity)
+                .onAppear {
+                    withAnimation(.easeInOut.repeatForever()) {
+                        opacity = 0.5
+                    }
                 }
-            }
+        
     }
 }

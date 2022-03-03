@@ -124,10 +124,18 @@ struct Media: Codable {
 }
 
 
-
 class LiveDataModel: ObservableObject {
     @Published var response: Response?
     @Published var loading: Bool = true
+    
+    func startUpdateLoop() {
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { timer in
+            Task {
+                await self.load()
+            }
+            
+        }
+    }
     
     init() {
         NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification,
@@ -137,10 +145,11 @@ class LiveDataModel: ObservableObject {
                 await self.load()
             }
         }
+        startUpdateLoop()
     }
     
-    func load() async {
-        print("LOADING DATA")
+    @objc func load() async {
+        print("Loading data")
         
         DispatchQueue.main.async {
             self.loading = true

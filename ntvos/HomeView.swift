@@ -30,11 +30,11 @@ struct HomeView: View {
                     .opacity(0.2)
                 VStack(alignment: .center) {
                     Spacer()
-                    if liveData.loading || liveData.response == nil {
+                    if liveData.response == nil {
                         LoadingView()
                     } else {
                         HStack {
-                            ForEach(liveData.response!.results, id: \.id) { result in
+                            ForEach(liveData.response!.results, id: \.channelName) { result in
                                 NavigationLink(destination: ChannelView(result: result), tag: result.channelName, selection: $openChannel) {
                                     ChannelCardView(result: result)
                                 }

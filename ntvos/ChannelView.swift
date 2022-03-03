@@ -17,7 +17,7 @@ private let characterEntities : [ Substring : Character ] = [
     "&apos;"    : "'",
     "&lt;"      : "<",
     "&gt;"      : ">",
-
+    
     // HTML character entity references:
     "&nbsp;"    : "\u{00a0}",
     // ...
@@ -25,24 +25,24 @@ private let characterEntities : [ Substring : Character ] = [
 ]
 
 extension String {
-
+    
     /// Returns a new string made by replacing in the `String`
     /// all HTML character entity references with the corresponding
     /// character.
     var stringByDecodingHTMLEntities : String {
-
+        
         // ===== Utility functions =====
-
+        
         // Convert the number in the string to the corresponding
         // Unicode character, e.g.
         //    decodeNumeric("64", 10)   --> "@"
         //    decodeNumeric("20ac", 16) --> "€"
         func decodeNumeric(_ string : Substring, base : Int) -> Character? {
             guard let code = UInt32(string, radix: base),
-                let uniScalar = UnicodeScalar(code) else { return nil }
+                  let uniScalar = UnicodeScalar(code) else { return nil }
             return Character(uniScalar)
         }
-
+        
         // Decode the HTML character entity to the corresponding
         // Unicode character, return `nil` for invalid input.
         //     decode("&#64;")    --> "@"
@@ -50,7 +50,7 @@ extension String {
         //     decode("&lt;")     --> "<"
         //     decode("&foo;")    --> nil
         func decode(_ entity : Substring) -> Character? {
-
+            
             if entity.hasPrefix("&#x") || entity.hasPrefix("&#X") {
                 return decodeNumeric(entity.dropFirst(3).dropLast(), base: 16)
             } else if entity.hasPrefix("&#") {
@@ -59,17 +59,17 @@ extension String {
                 return characterEntities[entity]
             }
         }
-
+        
         // ===== Method starts here =====
-
+        
         var result = ""
         var position = startIndex
-
+        
         // Find the next '&' and copy the characters preceding it to `result`:
         while let ampRange = self[position...].range(of: "&") {
             result.append(contentsOf: self[position ..< ampRange.lowerBound])
             position = ampRange.lowerBound
-
+            
             // Find the next ';' and copy everything from '&' to ';' into `entity`
             guard let semiRange = self[position...].range(of: ";") else {
                 // No matching ';'.
@@ -77,7 +77,7 @@ extension String {
             }
             let entity = self[position ..< semiRange.upperBound]
             position = semiRange.upperBound
-
+            
             if let decoded = decode(entity) {
                 // Replace by decoded character:
                 result.append(decoded)
@@ -101,7 +101,75 @@ struct ChannelView: View {
     var body: some View {
         
         ZStack {
-            
+            VStack {
+                Spacer()
+                HStack {
+                    if player.customerPlayerStatus == .Loading {
+                        LoadingView()
+                    } else if player.customerPlayerStatus == .Playing {
+                        Button(action: {
+                            player.pause()
+                        }){
+                            VStack {
+                                Spacer()
+                                Image(systemName: "pause.fill")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.black)
+                                Spacer()
+                            }
+                            .frame(width: 50, height: 50, alignment: .center)
+                            .background(.white)
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                        .buttonStyle(.card)
+                        
+                    } else if player.customerPlayerStatus == .Paused {
+                        Button(action: {
+                            player.play()
+                        }){
+                            VStack {
+                                Spacer()
+                                Image(systemName: "play.fill")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.black)
+                                Spacer()
+                            }
+                            .frame(width: 50, height: 50, alignment: .center)
+                            .background(.white)
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                        .buttonStyle(.card)
+                        
+                    }
+                    Spacer()
+                }
+                .frame(height: 100)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(result.now.broadcastTitle.stringByDecodingHTMLEntities.uppercased())
+                            .font(Font.custom("Univers-BoldCondensed", size: 30))
+                            .foregroundColor(.black)
+                        Text(result.now.embeds.details.locationLong!.uppercased())
+                            .font(Font.custom("Univers-Condensed", size: 30))
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 0))
+                        
+                        Text(result.now.embeds.details.detailsDescription.trimmingCharacters(in: .whitespacesAndNewlines))
+                            .font(.system(size: 20))
+                            .foregroundColor(.black)
+                            .lineLimit(3)
+                            .frame(minWidth: 200, idealWidth: 200, maxWidth: UIScreen.main.bounds.width / 2, alignment: .leading)
+                            .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 0))
+                        
+                    }
+                    .padding(35)
+                    .background {
+                        Color(.white)
+                    }
+                    Spacer()
+                }
+            }
+        }.background {
             AsyncImage(url: URL(string: result.now.embeds.details.media.backgroundLarge)) {
                 image in
                 image
@@ -112,77 +180,14 @@ struct ChannelView: View {
                 Color(.black)
             }
             .ignoresSafeArea()
-            
-            VStack {
-                Spacer()
-                VStack(alignment: .leading) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(result.now.broadcastTitle.stringByDecodingHTMLEntities.uppercased())
-                                .font(Font.custom("Univers-BoldCondensed", size: 30))
-                                .foregroundColor(.black)
-                            Text(result.now.embeds.details.locationLong!.uppercased())
-                                .font(Font.custom("Univers-Condensed", size: 30))
-                                .foregroundColor(.black)
-                                .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 0))
-                                
-                            Text(result.now.embeds.details.detailsDescription.trimmingCharacters(in: .whitespacesAndNewlines))
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                                .lineLimit(3)
-                                .frame(minWidth: 200, idealWidth: 200, maxWidth: UIScreen.main.bounds.width / 2, alignment: .leading)
-                                .padding(EdgeInsets(top: 3, leading: 0, bottom: 10, trailing: 0))
-                            
-                        }
-                        .padding(35)
-                        .background {
-                            Color(.white)
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        if player.customerPlayerStatus == .Loading {
-                          LoadingView()
-                        } else if player.customerPlayerStatus == .Playing {
-                            Button(action: {
-                                player.pause()
-                            }){
-                                HStack {
-                                    Image(systemName: "pause")
-                                        .font(.system(size: 20))
-                                        .foregroundColor(.black)
-                                }
-                                .frame(width: 50, height: 50)
-                                .background(.white)
-                            }
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                            .buttonStyle(.card)
-
-                        } else if player.customerPlayerStatus == .Paused {
-                            Button(action: {
-                                player.play()
-                            }){
-                                HStack {
-                                    Image(systemName: "play")
-                                        .font(.system(size: 20))
-                                        .foregroundColor(.black)
-                                }
-                                .frame(width: 50, height: 50)
-                                .background(.white)
-                            }
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                            .buttonStyle(.card)
-
-                        }
-                        Spacer()
-                    }
-                    .frame(width: 200, height: 100)
-                }
-            }
         }
         
         .onAppear {
-            player.startPlay(streamUrl: liveData.streamUrlForChannel(channel: result.channelName))
+            let streamUrl = liveData.streamUrlForChannel(channel: result.channelName)
+            if (player.customerPlayerStatus != .Playing || player.currentStreamUrl != streamUrl) {
+                player.startPlay(streamUrl: liveData.streamUrlForChannel(channel: result.channelName))
+            }
+            
         }
     }
 }

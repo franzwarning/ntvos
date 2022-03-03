@@ -20,6 +20,7 @@ enum CustomPlayerStatus {
 class Player: AVPlayer, ObservableObject  {
     
     @Published var customerPlayerStatus: CustomPlayerStatus = .None
+    @Published var currentStreamUrl: String?
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 
@@ -52,6 +53,7 @@ class Player: AVPlayer, ObservableObject  {
         self.pause()
         self.rate = 0
         self.customerPlayerStatus = .None
+        self.currentStreamUrl = nil
         UIApplication.shared.isIdleTimerDisabled = false
     }
     
@@ -60,7 +62,7 @@ class Player: AVPlayer, ObservableObject  {
         
         DispatchQueue.main.async {
             self.customerPlayerStatus = .Loading
-            
+            self.currentStreamUrl = streamUrl
         }
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -70,6 +72,8 @@ class Player: AVPlayer, ObservableObject  {
         let playerItem = AVPlayerItem(url: url)
         self.replaceCurrentItem(with: playerItem)
         self.play()
+        
         UIApplication.shared.isIdleTimerDisabled = true
+        
     }
 }

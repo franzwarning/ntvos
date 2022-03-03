@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+
+
 struct HomeView: View {
     @EnvironmentObject var liveData: LiveDataModel
     @EnvironmentObject var player: Player
@@ -17,22 +19,33 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .center) {
-                Spacer()
-                if liveData.loading || liveData.response == nil {
-                    LoadingView()
-                } else {
-                    HStack {
-                        ForEach(liveData.response!.results, id: \.id) { result in
-                            NavigationLink(destination: ChannelView(result: result), tag: result.channelName, selection: $openChannel) {
-                                ChannelCardView(result: result)
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(colors: [.cyan, .secondary]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                
+                    .ignoresSafeArea()
+                    .opacity(0.2)
+                VStack(alignment: .center) {
+                    Spacer()
+                    if liveData.loading || liveData.response == nil {
+                        LoadingView()
+                    } else {
+                        HStack {
+                            ForEach(liveData.response!.results, id: \.id) { result in
+                                NavigationLink(destination: ChannelView(result: result), tag: result.channelName, selection: $openChannel) {
+                                    ChannelCardView(result: result)
+                                }
+                                .buttonStyle(.card)
                             }
-                            .buttonStyle(.card)
                         }
                     }
+                    Spacer()
                 }
-                Spacer()
             }
+            
             .frame(
                 minWidth: 0,
                 maxWidth: .infinity,

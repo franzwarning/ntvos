@@ -45,7 +45,7 @@ struct ChannelCardView: View {
                             top: 0, leading: 0, bottom: 10, trailing: 0
                         ))
                         HStack {
-                            Text(result.now.broadcastTitle)
+                            Text(result.now.broadcastTitle.stringByDecodingHTMLEntities)
                                 .lineLimit(2)
                                 .font(Font.custom("Univers-Bold", size: 30))
                             Spacer()

@@ -32,7 +32,7 @@ struct ChannelCardView: View {
                     .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                     .background(.white)
                     Spacer()
-                }.padding()
+                }.padding(20)
                 Spacer()
                 HStack {
                     VStack {
@@ -45,17 +45,29 @@ struct ChannelCardView: View {
                             top: 0, leading: 0, bottom: 10, trailing: 0
                         ))
                         HStack {
-                            Text(result.now.broadcastTitle.stringByDecodingHTMLEntities)
+                            Text(result.now.broadcastTitle.stringByDecodingHTMLEntities.uppercased())
                                 .lineLimit(2)
-                                .font(Font.custom("Univers-Bold", size: 30))
+                                .font(Font.custom("Univers-BoldCondensed", size: 30))
                             Spacer()
                         }
+                        Spacer().frame(width: 0, height: 2)
                     }
                     .padding()
-                    .background(.black)
-                }.padding()
+                    .background {
+                        Color(.black)
+                    }
+                }.padding(20)
             }
-            .background(AsyncImage(url: URL(string: result.now.embeds.details.media.pictureLarge)).scaledToFill())
+            .background{
+                AsyncImage(url: URL(string: result.now.embeds.details.media.pictureLarge)) {
+                    image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    Color(.black)
+                }
+            }
             .frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.height / 2)
         }
 

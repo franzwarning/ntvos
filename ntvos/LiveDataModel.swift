@@ -155,8 +155,10 @@ class LiveDataModel: ObservableObject {
             self.loading = true
         }
         
+        let config = URLSessionConfiguration.default
+        config.httpAdditionalHeaders = ["User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36"]
         let url = URL(string: "https://www.nts.live/api/v2/live")!
-        let urlSession = URLSession.shared
+        let urlSession = URLSession(configuration: config)
         
         do {
             let (data, _) = try await urlSession.data(from: url)

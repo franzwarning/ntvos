@@ -149,7 +149,7 @@ struct ChannelView: View {
                         Text(result.now.broadcastTitle.stringByDecodingHTMLEntities.uppercased())
                             .font(Font.custom("Univers-BoldCondensed", size: 30))
                             .foregroundColor(.black)
-                        Text(result.now.embeds.details.locationLong!.uppercased())
+                        Text(result.now.embeds.details.locationLong?.uppercased() ?? "UNKNOWN")
                             .font(Font.custom("Univers-Condensed", size: 30))
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 0))

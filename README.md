@@ -2,4 +2,11 @@
 
 Very basic NTS.live app for Apple TV
 
-<img width="1693" alt="CleanShot 2022-03-02 at 10 15 55@2x" src="https://user-images.githubusercontent.com/1596816/156390368-e9b9acbb-840d-4356-a7f4-c5f29b2b4f17.png">
+## Home Screen
+
+![Simulator Screen Shot - Apple TV 4K (2nd generation) - 2022-03-03 at 17 31 02](https://user-images.githubusercontent.com/1596816/157050666-e4feae0f-e78a-455f-9642-2f3f50fa7874.png)
+
+## Channel Screen
+
+![Simulator Screen Shot - Apple TV 4K (2nd generation) - 2022-03-03 at 17 31 35](https://user-images.githubusercontent.com/1596816/157050698-cf031f66-ebbc-482b-a3b9-adef290613cd.png)
+

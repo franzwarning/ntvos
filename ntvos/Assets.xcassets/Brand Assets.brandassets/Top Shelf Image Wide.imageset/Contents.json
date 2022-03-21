@@ -13,12 +13,12 @@
       "scale" : "3x"
     },
     {
-      "filename" : "wide.png",
+      "filename" : "topshelfwide.png",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
-      "filename" : "wide@2x.png",
+      "filename" : "topshelfwide@2x.png",
       "idiom" : "tv",
       "scale" : "2x"
     }

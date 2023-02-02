@@ -1,0 +1,767 @@
+{
+  "results": [
+    {
+      "channel_name": "1",
+      "now": {
+        "broadcast_title": "SOUP TO NUTS W/ ROSS ALLEN",
+        "start_timestamp": "2023-02-02T11:00:00Z",
+        "end_timestamp": "2023-02-02T13:00:00Z",
+        "embeds": {
+          "details": {
+            "status": "pending",
+            "updated": "2023-01-25T14:19:13+00:00",
+            "name": "Soup To Nuts w/ Ross Allen",
+            "description": "Explore the many different strains of good music that make up Ross Allen's collection. ",
+            "description_html": "<h3>Explore the many different strains of good music that make up Ross Allen's collection. </h3>",
+            "external_links": [],
+            "moods": [
+              {
+                "id": "moods-safe-for-work",
+                "value": "SAFE FOR WORK"
+              }
+            ],
+            "genres": [
+              {
+                "id": "genres-soulrhythm-funk",
+                "value": "Funk"
+              },
+              {
+                "id": "genres-soulrhythm-soul",
+                "value": "Soul"
+              },
+              {
+                "id": "genres-housetechno-house",
+                "value": "House"
+              },
+              {
+                "id": "genres-hiphoprandb-hiphop",
+                "value": "Hip Hop "
+              }
+            ],
+            "location_short": "LDN",
+            "location_long": "London",
+            "intensity": null,
+            "media": {
+              "background_large": "https://media2.ntslive.co.uk/resize/1600x1600/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "background_medium_large": "https://media2.ntslive.co.uk/resize/800x800/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "background_medium": "https://media.ntslive.co.uk/resize/400x400/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "background_small": "https://media3.ntslive.co.uk/resize/200x200/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "background_thumb": "https://media3.ntslive.co.uk/resize/100x100/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "picture_large": "https://media2.ntslive.co.uk/resize/1600x1600/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "picture_medium_large": "https://media2.ntslive.co.uk/resize/800x800/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "picture_medium": "https://media.ntslive.co.uk/resize/400x400/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "picture_small": "https://media3.ntslive.co.uk/resize/200x200/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg",
+              "picture_thumb": "https://media3.ntslive.co.uk/resize/100x100/e678e05c-d9b5-4e1b-b840-9c60b91fc23e_1672963200.jpeg"
+            },
+            "episode_alias": "soup-to-nuts-ross-allen-2nd-february-2023",
+            "show_alias": "soup-to-nuts-ross-allen",
+            "broadcast": "2023-02-02T11:00:00+00:00",
+            "mixcloud": null,
+            "audio_sources": [],
+            "embeds": {},
+            "links": [
+              {
+                "rel": "self",
+                "href": "https://www.nts.live/api/v2/shows/soup-to-nuts-ross-allen/episodes/soup-to-nuts-ross-allen-2nd-february-2023",
+                "type": "application/vnd.episode+json;charset=utf-8"
+              },
+              {
+                "rel": "show",
+                "href": "https://www.nts.live/api/v2/shows/soup-to-nuts-ross-allen",
+                "type": "application/vnd.show+json;charset=utf-8"
+              },
+              {
+                "rel": "tracklist",
+                "href": "https://www.nts.live/api/v2/shows/soup-to-nuts-ross-allen/episodes/soup-to-nuts-ross-allen-2nd-february-2023/tracklist",
+                "type": "application/vnd.track-list+json;charset=utf-8"
+              }
+            ]
+          }
+        },
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/soup-to-nuts-ross-allen/episodes/soup-to-nuts-ross-allen-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next": {
+        "broadcast_title": "Pascale Project",
+        "start_timestamp": "2023-02-02T13:00:00Z",
+        "end_timestamp": "2023-02-02T15:00:00Z",
+        "embeds": {
+          "details": {
+            "status": "pending",
+            "updated": "2023-02-02T12:41:02+00:00",
+            "name": "Pascale Project",
+            "description": "The Montreal-based producer and DJ fills in for Shanti Celeste with a two hour mix…",
+            "description_html": "<h3>The Montreal-based producer and DJ fills in for Shanti Celeste with a two hour mix…</h3>",
+            "external_links": [
+              "https://www.facebook.com/ShantiCeleste",
+              "https://twitter.com/ShantiCeleste",
+              "https://soundcloud.com/shanticeleste"
+            ],
+            "moods": [
+              {
+                "id": "moods-minimal-talkin",
+                "value": "Minimal Talkin"
+              },
+              {
+                "id": "moods-music-to-dance-to",
+                "value": "MUSIC TO DANCE TO"
+              },
+              {
+                "id": "moods-maximum-effort",
+                "value": "MAXIMUM EFFORT"
+              }
+            ],
+            "genres": [
+              {
+                "id": "genres-housetechno-house",
+                "value": "House"
+              },
+              {
+                "id": "genres-housetechno-acid",
+                "value": "Acid"
+              },
+              {
+                "id": "genres-housetechno-house-chicagohouse",
+                "value": "Chicago House"
+              },
+              {
+                "id": "genres-housetechno-house-deephouse",
+                "value": "Deep House"
+              }
+            ],
+            "location_short": "LDN",
+            "location_long": "London",
+            "intensity": "70",
+            "media": {
+              "background_large": "https://media2.ntslive.co.uk/resize/1600x1600/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "background_medium_large": "https://media2.ntslive.co.uk/resize/800x800/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "background_medium": "https://media.ntslive.co.uk/resize/400x400/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "background_small": "https://media3.ntslive.co.uk/resize/200x200/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "background_thumb": "https://media3.ntslive.co.uk/resize/100x100/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "picture_large": "https://media2.ntslive.co.uk/resize/1600x1600/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "picture_medium_large": "https://media2.ntslive.co.uk/resize/800x800/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "picture_medium": "https://media.ntslive.co.uk/resize/400x400/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "picture_small": "https://media3.ntslive.co.uk/resize/200x200/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg",
+              "picture_thumb": "https://media3.ntslive.co.uk/resize/100x100/5f25fa25-83cc-4679-b95c-6eebda6c7910_1675296000.jpeg"
+            },
+            "episode_alias": "shanticeleste-2nd-february-2023",
+            "show_alias": "shanticeleste",
+            "broadcast": "2023-02-02T13:00:00+00:00",
+            "mixcloud": null,
+            "audio_sources": [],
+            "embeds": {},
+            "links": [
+              {
+                "rel": "self",
+                "href": "https://www.nts.live/api/v2/shows/shanticeleste/episodes/shanticeleste-2nd-february-2023",
+                "type": "application/vnd.episode+json;charset=utf-8"
+              },
+              {
+                "rel": "show",
+                "href": "https://www.nts.live/api/v2/shows/shanticeleste",
+                "type": "application/vnd.show+json;charset=utf-8"
+              },
+              {
+                "rel": "tracklist",
+                "href": "https://www.nts.live/api/v2/shows/shanticeleste/episodes/shanticeleste-2nd-february-2023/tracklist",
+                "type": "application/vnd.track-list+json;charset=utf-8"
+              }
+            ]
+          }
+        },
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/shanticeleste/episodes/shanticeleste-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next2": {
+        "broadcast_title": "P-rallel",
+        "start_timestamp": "2023-02-02T15:00:00Z",
+        "end_timestamp": "2023-02-02T16:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/p-rallel/episodes/p-rallel-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next3": {
+        "broadcast_title": "OK Williams",
+        "start_timestamp": "2023-02-02T16:00:00Z",
+        "end_timestamp": "2023-02-02T18:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/ok-williams/episodes/ok-williams-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next4": {
+        "broadcast_title": "Scary Things w/ DJ Bempah &amp; JK",
+        "start_timestamp": "2023-02-02T18:00:00Z",
+        "end_timestamp": "2023-02-02T20:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/scary-things/episodes/scary-things-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next5": {
+        "broadcast_title": "The Tim &amp; Barry Show",
+        "start_timestamp": "2023-02-02T20:00:00Z",
+        "end_timestamp": "2023-02-02T22:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/dont-watch-that/episodes/dont-watch-that-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next6": {
+        "broadcast_title": "Shamos",
+        "start_timestamp": "2023-02-02T22:00:00Z",
+        "end_timestamp": "2023-02-03T00:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next7": {
+        "broadcast_title": "Mobbs",
+        "start_timestamp": "2023-02-03T00:00:00Z",
+        "end_timestamp": "2023-02-03T02:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/mobbs/episodes/mobbs-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next8": {
+        "broadcast_title": "Kampire",
+        "start_timestamp": "2023-02-03T02:00:00Z",
+        "end_timestamp": "2023-02-03T03:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/kampire/episodes/kampire-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next9": {
+        "broadcast_title": "DIMENSION DOOR (R)",
+        "start_timestamp": "2023-02-03T03:00:00Z",
+        "end_timestamp": "2023-02-03T04:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/dimension-door/episodes/dimension-door-8th-june-2021",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next10": {
+        "broadcast_title": "ASHER G&#039;S CARIBBEAN MEMORIES (R)",
+        "start_timestamp": "2023-02-03T04:00:00Z",
+        "end_timestamp": "2023-02-03T05:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/asher-g/episodes/asher-g-s-caribbean-memories-17th-january-2021",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next11": {
+        "broadcast_title": "STUDIO ONE - THE HEPTONES SPECIAL (R)",
+        "start_timestamp": "2023-02-03T05:00:00Z",
+        "end_timestamp": "2023-02-03T06:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/studio-one/episodes/the-heptones-22nd-october-2020",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next12": {
+        "broadcast_title": "KALI MALONE (R)",
+        "start_timestamp": "2023-02-03T06:00:00Z",
+        "end_timestamp": "2023-02-03T07:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/guests/episodes/kali-malone-24th-march-2020",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next13": {
+        "broadcast_title": "The Early Bird Show w/ Jack Rollo",
+        "start_timestamp": "2023-02-03T07:00:00Z",
+        "end_timestamp": "2023-02-03T09:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/early-bird-show-jack-rollo/episodes/early-bird-show-jack-rollo-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next14": {
+        "broadcast_title": "The NTS Breakfast Show w/ Zakia",
+        "start_timestamp": "2023-02-03T09:00:00Z",
+        "end_timestamp": "2023-02-03T11:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/the-breakfast-show-zakia/episodes/the-breakfast-show-zakia-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next15": {
+        "broadcast_title": "SOUP TO NUTS W/ SCRATCHA",
+        "start_timestamp": "2023-02-03T11:00:00Z",
+        "end_timestamp": "2023-02-03T13:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/soup-to-nuts-scratcha/episodes/soup-to-nuts-scratcha-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next16": {
+        "broadcast_title": "Cousins",
+        "start_timestamp": "2023-02-03T14:00:00Z",
+        "end_timestamp": "2023-02-03T15:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/cousins/episodes/cousins-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next17": {
+        "broadcast_title": "Gelato w/ Stephane",
+        "start_timestamp": "2023-02-03T16:00:00Z",
+        "end_timestamp": "2023-02-03T17:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/gelato/episodes/gelato-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      }
+    },
+    {
+      "channel_name": "2",
+      "now": {
+        "broadcast_title": "CS + KREME",
+        "start_timestamp": "2023-02-02T12:00:00Z",
+        "end_timestamp": "2023-02-02T13:00:00Z",
+        "embeds": {
+          "details": {
+            "status": "pending",
+            "updated": "2023-01-25T15:47:31+00:00",
+            "name": "CS + KREME",
+            "description": "Bi-monthly emissions from Conrad Standish and Sam Karmel, aka CS + Kreme - keeping it loose, deep and free.",
+            "description_html": "<h3>Bi-monthly emissions from Conrad Standish and Sam Karmel, aka CS + Kreme - keeping it loose, deep and free.</h3>",
+            "external_links": [],
+            "moods": [],
+            "genres": [
+              {
+                "id": "genres-avantgarde-experimental",
+                "value": "Experimental"
+              },
+              {
+                "id": "genres-ambientnewage-ambient",
+                "value": "Ambient"
+              }
+            ],
+            "location_short": "MLB",
+            "location_long": "Melbourne",
+            "intensity": null,
+            "media": {
+              "background_large": "https://media2.ntslive.co.uk/resize/1600x1600/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "background_medium_large": "https://media2.ntslive.co.uk/resize/800x800/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "background_medium": "https://media.ntslive.co.uk/resize/400x400/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "background_small": "https://media3.ntslive.co.uk/resize/200x200/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "background_thumb": "https://media3.ntslive.co.uk/resize/100x100/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "picture_large": "https://media2.ntslive.co.uk/resize/1600x1600/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "picture_medium_large": "https://media2.ntslive.co.uk/resize/800x800/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "picture_medium": "https://media.ntslive.co.uk/resize/400x400/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "picture_small": "https://media3.ntslive.co.uk/resize/200x200/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg",
+              "picture_thumb": "https://media3.ntslive.co.uk/resize/100x100/ce4fdf9b-035e-4007-b651-7da7905a4d49_1675296000.jpeg"
+            },
+            "episode_alias": "cs-kreme-2nd-february-2023",
+            "show_alias": "cs-kreme",
+            "broadcast": "2023-02-02T12:00:00+00:00",
+            "mixcloud": null,
+            "audio_sources": [],
+            "embeds": {},
+            "links": [
+              {
+                "rel": "self",
+                "href": "https://www.nts.live/api/v2/shows/cs-kreme/episodes/cs-kreme-2nd-february-2023",
+                "type": "application/vnd.episode+json;charset=utf-8"
+              },
+              {
+                "rel": "show",
+                "href": "https://www.nts.live/api/v2/shows/cs-kreme",
+                "type": "application/vnd.show+json;charset=utf-8"
+              },
+              {
+                "rel": "tracklist",
+                "href": "https://www.nts.live/api/v2/shows/cs-kreme/episodes/cs-kreme-2nd-february-2023/tracklist",
+                "type": "application/vnd.track-list+json;charset=utf-8"
+              }
+            ]
+          }
+        },
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/cs-kreme/episodes/cs-kreme-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next": {
+        "broadcast_title": "The Numero Group - 20 Years Aniversary",
+        "start_timestamp": "2023-02-02T13:00:00Z",
+        "end_timestamp": "2023-02-02T14:00:00Z",
+        "embeds": {
+          "details": {
+            "status": "pending",
+            "updated": "2023-02-02T07:30:20+00:00",
+            "name": "The Numero Group - 20 Years Aniversary",
+            "description": "Chicago-based archival record label, The Numero Group, host a deep-digging once a month show. Expect comprehensive round ups from their crates, picking out the best old music and reissues, as well as some jubilant nerdy record chat. ",
+            "description_html": "<h3>Chicago-based archival record label, The Numero Group, host a deep-digging once a month show. Expect comprehensive round ups from their crates, picking out the best old music and reissues, as well as some jubilant nerdy record chat. </h3>",
+            "external_links": [
+              "https://www.facebook.com/numerogroup/",
+              "https://twitter.com/numerogroup",
+              "https://www.numerogroup.com"
+            ],
+            "moods": [],
+            "genres": [
+              {
+                "id": "genres-jazz-souljazz",
+                "value": "Soul Jazz"
+              },
+              {
+                "id": "genres-soulrhythm-gospel",
+                "value": "Gospel"
+              },
+              {
+                "id": "genres-soulrhythm-rhythmandblues",
+                "value": "Rhythm & Blues"
+              },
+              {
+                "id": "genres-soulrhythm-soul",
+                "value": "Soul"
+              }
+            ],
+            "location_short": "CHI",
+            "location_long": "Chicago",
+            "intensity": "29",
+            "media": {
+              "background_large": "https://media2.ntslive.co.uk/resize/1600x1600/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "background_medium_large": "https://media2.ntslive.co.uk/resize/800x800/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "background_medium": "https://media.ntslive.co.uk/resize/400x400/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "background_small": "https://media3.ntslive.co.uk/resize/200x200/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "background_thumb": "https://media3.ntslive.co.uk/resize/100x100/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "picture_large": "https://media2.ntslive.co.uk/resize/1600x1600/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "picture_medium_large": "https://media2.ntslive.co.uk/resize/800x800/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "picture_medium": "https://media.ntslive.co.uk/resize/400x400/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "picture_small": "https://media3.ntslive.co.uk/resize/200x200/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png",
+              "picture_thumb": "https://media3.ntslive.co.uk/resize/100x100/50880deb-0c56-4bfa-b0c8-56bda2a97f0b_1675296000.png"
+            },
+            "episode_alias": "radio-free-numero-2nd-february-2023",
+            "show_alias": "radio-free-numero",
+            "broadcast": "2023-02-02T13:00:00+00:00",
+            "mixcloud": null,
+            "audio_sources": [],
+            "embeds": {},
+            "links": [
+              {
+                "rel": "self",
+                "href": "https://www.nts.live/api/v2/shows/radio-free-numero/episodes/radio-free-numero-2nd-february-2023",
+                "type": "application/vnd.episode+json;charset=utf-8"
+              },
+              {
+                "rel": "show",
+                "href": "https://www.nts.live/api/v2/shows/radio-free-numero",
+                "type": "application/vnd.show+json;charset=utf-8"
+              },
+              {
+                "rel": "tracklist",
+                "href": "https://www.nts.live/api/v2/shows/radio-free-numero/episodes/radio-free-numero-2nd-february-2023/tracklist",
+                "type": "application/vnd.track-list+json;charset=utf-8"
+              }
+            ]
+          }
+        },
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/radio-free-numero/episodes/radio-free-numero-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next2": {
+        "broadcast_title": "Rum Punch w/ Danny Fitzgerald",
+        "start_timestamp": "2023-02-02T14:00:00Z",
+        "end_timestamp": "2023-02-02T15:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/rum-punch-w-danny-fitzgerald/episodes/rum-punch-w-danny-fitzgerald-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next3": {
+        "broadcast_title": "Desire Paths w/ Laura Groves",
+        "start_timestamp": "2023-02-02T15:00:00Z",
+        "end_timestamp": "2023-02-02T16:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/desire-paths/episodes/desire-paths-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next4": {
+        "broadcast_title": "Tom Furse",
+        "start_timestamp": "2023-02-02T16:00:00Z",
+        "end_timestamp": "2023-02-02T17:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/tom-furse/episodes/tom-furse-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next5": {
+        "broadcast_title": "Dimension Door w/ Kedr Livanskiy",
+        "start_timestamp": "2023-02-02T17:00:00Z",
+        "end_timestamp": "2023-02-02T18:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/dimension-door/episodes/dimension-door-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next6": {
+        "broadcast_title": "RVNG Intl. Presents Friends &amp; Fiends",
+        "start_timestamp": "2023-02-02T18:00:00Z",
+        "end_timestamp": "2023-02-02T19:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/rvngintl/episodes/rvngintl-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next7": {
+        "broadcast_title": "Lightning Conductor w/ Lena Willikens",
+        "start_timestamp": "2023-02-02T19:00:00Z",
+        "end_timestamp": "2023-02-02T20:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/lena-willikens/episodes/lena-willikens-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next8": {
+        "broadcast_title": "CAN YOU FEEL THE SUN W/ CALL SUPER &amp; PARRIS",
+        "start_timestamp": "2023-02-02T20:00:00Z",
+        "end_timestamp": "2023-02-02T21:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/canyoufeelthesun-w-call-super-parris/episodes/canyoufeelthesun-w-call-super-parris-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next9": {
+        "broadcast_title": "Awe w/ Laurel Halo",
+        "start_timestamp": "2023-02-02T21:00:00Z",
+        "end_timestamp": "2023-02-02T22:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/laurel-halo/episodes/laurel-halo-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next10": {
+        "broadcast_title": "Forager Records: Kid Pesce Takeover",
+        "start_timestamp": "2023-02-02T22:00:00Z",
+        "end_timestamp": "2023-02-02T23:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/forager-records/episodes/forager-records-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next11": {
+        "broadcast_title": "Manila Times w/ Vex Ruffin &amp; Possiblemusic",
+        "start_timestamp": "2023-02-02T23:00:00Z",
+        "end_timestamp": "2023-02-03T00:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/vex-ruffin/episodes/vex-ruffin-2nd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next12": {
+        "broadcast_title": "Mishka",
+        "start_timestamp": "2023-02-03T00:00:00Z",
+        "end_timestamp": "2023-02-03T01:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/mishka/episodes/mishka-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next13": {
+        "broadcast_title": "Timetable",
+        "start_timestamp": "2023-02-03T01:00:00Z",
+        "end_timestamp": "2023-02-03T02:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/timetable/episodes/timetable-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next14": {
+        "broadcast_title": "Foreign Hour",
+        "start_timestamp": "2023-02-03T03:00:00Z",
+        "end_timestamp": "2023-02-03T04:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/foreign-hour/episodes/foreign-hour-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next15": {
+        "broadcast_title": "CDMX Tapes",
+        "start_timestamp": "2023-02-03T04:00:00Z",
+        "end_timestamp": "2023-02-03T06:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/naafi/episodes/naafi-3rd-february-2023",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next16": {
+        "broadcast_title": "PHYSICAL THERAPY - BIG BAD SAD UK MEGAMIX (R)",
+        "start_timestamp": "2023-02-03T06:00:00Z",
+        "end_timestamp": "2023-02-03T07:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/physical-therapy/episodes/physical-therapy-25th-march-2022",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      },
+      "next17": {
+        "broadcast_title": "BLACK FOREST W/ AFRODEUTSCHE (R)",
+        "start_timestamp": "2023-02-03T07:00:00Z",
+        "end_timestamp": "2023-02-03T08:00:00Z",
+        "embeds": {},
+        "links": [
+          {
+            "href": "https://www.nts.live/api/v2/shows/afrodeutsche/episodes/black-forest-w-afrodeutsche-30th-may-2020",
+            "rel": "details",
+            "type": "application/vnd.episode+json;charset=utf-8"
+          }
+        ]
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://www.nts.live/api/v2/live",
+      "type": "application/vnd.live-list+json;charset=utf-8"
+    }
+  ]
+}

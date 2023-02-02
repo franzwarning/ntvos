@@ -29,8 +29,6 @@
 		AF8F6EC2298BEA8100FA78EF /* mainResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8F6EC0298BEA8100FA78EF /* mainResponse.json */; };
 		AF8F6EC3298BEA8100FA78EF /* mainResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8F6EC0298BEA8100FA78EF /* mainResponse.json */; };
 		AF8F6EC5298BECD500FA78EF /* FakeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F6EC4298BECD500FA78EF /* FakeResponses.swift */; };
-		AF8F6EC6298BECD500FA78EF /* FakeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F6EC4298BECD500FA78EF /* FakeResponses.swift */; };
-		AF8F6EC7298BECD500FA78EF /* FakeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F6EC4298BECD500FA78EF /* FakeResponses.swift */; };
 		AFF35F5627CEC2A5006A117D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF35F5527CEC2A5006A117D /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +170,7 @@
 				AF7881CE27D11F42007E57B2 /* LoadingView.swift */,
 				AF7881CC27D11EC1007E57B2 /* HomeView.swift */,
 				AF3E4F8827CD985A00A3DBF8 /* ContentView.swift */,
+				AF8F6EC4298BECD500FA78EF /* FakeResponses.swift */,
 				AF3E4F8A27CD985A00A3DBF8 /* Assets.xcassets */,
 				AF3E4F8C27CD985A00A3DBF8 /* Preview Content */,
 			);
@@ -181,7 +180,6 @@
 		AF3E4F8C27CD985A00A3DBF8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AF8F6EC4298BECD500FA78EF /* FakeResponses.swift */,
 				AF3E4F8D27CD985A00A3DBF8 /* Preview Assets.xcassets */,
 				AF8F6EC0298BEA8100FA78EF /* mainResponse.json */,
 			);
@@ -395,7 +393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3E4F9827CD985B00A3DBF8 /* ntvosTests.swift in Sources */,
-				AF8F6EC6298BECD500FA78EF /* FakeResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +402,6 @@
 			files = (
 				AF3E4FA227CD985B00A3DBF8 /* ntvosUITests.swift in Sources */,
 				AF3E4FA427CD985B00A3DBF8 /* ntvosUITestsLaunchTests.swift in Sources */,
-				AF8F6EC7298BECD500FA78EF /* FakeResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

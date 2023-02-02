@@ -32,7 +32,7 @@ struct ContentView: View {
         ZStack {
             Color(.black)
                 .edgesIgnoringSafeArea(.all)
-            HomeView()
+            HomeViewManager()
         }
         .onPlayPauseCommand(perform: {
             player.toggle()

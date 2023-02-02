@@ -194,6 +194,7 @@ struct ChannelView: View {
 
 
 struct ChannelView_Preview: PreviewProvider {
+    
     static var previews: some View {
         ChannelView(
             result:
@@ -203,10 +204,10 @@ struct ChannelView_Preview: PreviewProvider {
                         broadcastTitle: "Broadcast",
                         startTimestamp: "2022-02-15T19:51:58+0000",
                         endTimestamp: "2022-02-15T19:51:58+0000",
-                        embeds: NowEmbeds(details: Details(status: "", updated: "", name: "", detailsDescription: "Rose-tinted hallucinogenic sounds from Astral Vibes' Acid Memories. Illicit dealings in psychedelia of all persuasions. Sit back and enjoy…", descriptionHTML: "", externalLinks: [], moods: [], genres: [], locationShort: "", locationLong: "London", intensity: "", media: Media(backgroundLarge: "", backgroundMediumLarge: "", backgroundMedium: "", backgroundSmall: "", backgroundThumb: "", pictureLarge: "", pictureMediumLarge: "", pictureMedium: "", pictureSmall: "", pictureThumb: ""), episodeAlias: "", showAlias: "", broadcast: "", mixcloud: nil, audioSources: [], embeds: DetailsEmbeds(), links: [])),
+                        embeds: NowEmbeds(details: Details(status: "", updated: "", name: "", detailsDescription: "Diam potenti accumsan aliquet libero convallis inceptos asdklfjlk askljf ljasdlk jklasjf kljlk asdljkl jskldafjklasjd  askldfklasklf jskladjfl asdklj sadjflks jadsda jl jsdakjflkasdj fkjaslf jsdklafj lksdjlfadfjlakj fklsjflk ajsdfkj klfasdjkf jsdklaf jklsajfklasd kfjdslkfj sklajf klajslkjf kasdjkfj asklfj sakfjlkk", descriptionHTML: "", externalLinks: [], moods: [], genres: [], locationShort: "", locationLong: "London", intensity: "", media: Media(backgroundLarge: "", backgroundMediumLarge: "", backgroundMedium: "", backgroundSmall: "", backgroundThumb: "", pictureLarge: "", pictureMediumLarge: "", pictureMedium: "", pictureSmall: "", pictureThumb: ""), episodeAlias: "", showAlias: "", broadcast: "", mixcloud: nil, audioSources: [], embeds: DetailsEmbeds(), links: [])),
                         links: [])
                 )
-        )
+        ).environmentObject(Player()).environmentObject(LiveDataModel())
     }
 }
 

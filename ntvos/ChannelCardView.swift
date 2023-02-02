@@ -68,9 +68,18 @@ struct ChannelCardView: View {
                     Color(.black)
                 }
             }
-            .frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.height / 2)
+            .frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.height / 2).clipped()
         }
 
+    }
+}
+
+
+struct ChannelCardView_Preview: PreviewProvider {
+    
+    static var previews: some View {
+        ChannelCardView(result: FakeResponses().mainResponse!.results[0])
+        
     }
 }
 

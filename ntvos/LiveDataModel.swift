@@ -133,7 +133,7 @@ class LiveDataModel: ObservableObject {
             Task {
                 await self.load()
             }
-            
+
         }
     }
     

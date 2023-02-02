@@ -9,13 +9,9 @@ import Foundation
 import SwiftUI
 
 
-
 struct HomeView: View {
-    @EnvironmentObject var liveData: LiveDataModel
-    @EnvironmentObject var player: Player
-    
+    var response: Response?
     @State var openChannel: String?
-    
     
     var body: some View {
         NavigationView {
@@ -26,15 +22,15 @@ struct HomeView: View {
                     endPoint: .bottomTrailing
                 )
                 
-                    .ignoresSafeArea()
-                    .opacity(0.2)
+                .ignoresSafeArea()
+                .opacity(0.2)
                 VStack(alignment: .center) {
                     Spacer()
-                    if liveData.response == nil {
+                    if response == nil {
                         LoadingView()
                     } else {
                         HStack {
-                            ForEach(liveData.response!.results, id: \.channelName) { result in
+                            ForEach(response!.results, id: \.channelName) { result in
                                 NavigationLink(destination: ChannelView(result: result), tag: result.channelName, selection: $openChannel) {
                                     ChannelCardView(result: result)
                                 }
@@ -57,3 +53,25 @@ struct HomeView: View {
         }
     }
 }
+
+struct HomeViewManager: View {
+    @EnvironmentObject var liveData: LiveDataModel
+    
+    
+    
+    
+    var body: some View {
+        HomeView(response: liveData.response)
+    }
+}
+
+
+
+struct HomeView_Preview: PreviewProvider {
+    
+
+    static var previews: some View {
+        HomeView(response: FakeResponses().mainResponse)
+    }
+}
+

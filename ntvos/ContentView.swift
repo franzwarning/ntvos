@@ -27,15 +27,20 @@ func utcToLocal(dateStr: String) -> String? {
 struct ContentView: View {
     @ObservedObject var player = Player()
     @ObservedObject var liveData = LiveDataModel()
+    @State private var playRequests = 0
     
     var body: some View {
         ZStack {
             Color(.black)
                 .edgesIgnoringSafeArea(.all)
-            HomeViewManager()
+            HomeViewManager(playRequests: playRequests)
         }
         .onPlayPauseCommand(perform: {
-            player.toggle()
+            if player.customerPlayerStatus == .None {
+                playRequests += 1 // nothing has played yet: ask HomeView to open the focused channel
+            } else {
+                player.toggle()
+            }
         })
         .environmentObject(player)
         .environmentObject(liveData)

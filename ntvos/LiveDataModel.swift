@@ -145,6 +145,10 @@ class LiveDataModel: ObservableObject {
                 await self.load()
             }
         }
+        // willEnterForeground isn't posted on a cold launch, so load now rather than waiting for the first timer tick.
+        Task {
+            await self.load()
+        }
         startUpdateLoop()
     }
     

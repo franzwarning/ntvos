@@ -11,7 +11,9 @@ import SwiftUI
 
 struct HomeView: View {
     var response: Response?
+    var playRequests = 0
     @State var openChannel: String?
+    @FocusState private var focusedChannel: String?
     
     var body: some View {
         NavigationView {
@@ -35,6 +37,15 @@ struct HomeView: View {
                                     ChannelCardView(result: result)
                                 }
                                 .buttonStyle(.card)
+                                .focused($focusedChannel, equals: result.channelName)
+                            }
+                        }
+                        // Focus the first card once the cards load, so Play/Pause has a station to start.
+                        .onAppear {
+                            DispatchQueue.main.async {
+                                if focusedChannel == nil {
+                                    focusedChannel = response?.results.first?.channelName
+                                }
                             }
                         }
                     }
@@ -51,17 +62,22 @@ struct HomeView: View {
             )
             .edgesIgnoringSafeArea(.all)
         }
+        // Play/Pause before anything has played opens the focused channel, same as Select.
+        .onChange(of: playRequests) { _ in
+            openChannel = focusedChannel ?? response?.results.first?.channelName
+        }
     }
 }
 
 struct HomeViewManager: View {
     @EnvironmentObject var liveData: LiveDataModel
+    var playRequests = 0
     
     
     
     
     var body: some View {
-        HomeView(response: liveData.response)
+        HomeView(response: liveData.response, playRequests: playRequests)
     }
 }
 

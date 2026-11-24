@@ -52,6 +52,8 @@ struct ChannelCardView: View {
                         }
                         Spacer().frame(width: 0, height: 2)
                     }
+                    // The box is always black, so don't let the text follow the system's light/dark appearance.
+                    .foregroundColor(.white)
                     .padding()
                     .background {
                         Color(.black)
